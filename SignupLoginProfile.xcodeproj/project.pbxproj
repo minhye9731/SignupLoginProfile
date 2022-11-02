@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		0E4E84A2291255F80051F6EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84A1291255F80051F6EB /* AppDelegate.swift */; };
 		0E4E84A4291255F80051F6EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84A3291255F80051F6EB /* SceneDelegate.swift */; };
-		0E4E84A6291255F80051F6EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84A5291255F80051F6EB /* ViewController.swift */; };
 		0E4E84A9291255F80051F6EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4E84A7291255F80051F6EB /* Main.storyboard */; };
 		0E4E84AB291255FA0051F6EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4E84AA291255FA0051F6EB /* Assets.xcassets */; };
 		0E4E84AE291255FA0051F6EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4E84AC291255FA0051F6EB /* LaunchScreen.storyboard */; };
+		0E4E84B6291257CD0051F6EB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84B5291257CD0051F6EB /* SignUpViewController.swift */; };
+		0E4E84B82912580F0051F6EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84B72912580F0051F6EB /* LoginViewController.swift */; };
+		0E4E84BA291258630051F6EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84B9291258630051F6EB /* ProfileViewController.swift */; };
+		0E4E84BE29125B920051F6EB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0E4E84BD29125B920051F6EB /* .gitignore */; };
+		0E4E84C129125C390051F6EB /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84C029125C390051F6EB /* NetworkResult.swift */; };
+		0E4E84C429125C560051F6EB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4E84C329125C560051F6EB /* Alamofire */; };
+		0E4E84C729125DF50051F6EB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4E84C629125DF50051F6EB /* SnapKit */; };
+		0E4E84CA29125F6C0051F6EB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84C929125F6C0051F6EB /* BaseViewController.swift */; };
+		0E4E84CD291261F60051F6EB /* Transition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84CC291261F60051F6EB /* Transition+Extension.swift */; };
+		0E4E84D029126B530051F6EB /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84CF29126B530051F6EB /* APIRouter.swift */; };
+		0E4E84D22912A0850051F6EB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84D12912A0850051F6EB /* BaseView.swift */; };
+		0E4E84D42912A0B80051F6EB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84D32912A0B80051F6EB /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E4E849E291255F80051F6EB /* SignupLoginProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignupLoginProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4E84A1291255F80051F6EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E4E84A3291255F80051F6EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0E4E84A5291255F80051F6EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E4E84A8291255F80051F6EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E4E84AA291255FA0051F6EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E4E84AD291255FA0051F6EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E4E84AF291255FA0051F6EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E4E84B5291257CD0051F6EB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0E4E84B72912580F0051F6EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0E4E84B9291258630051F6EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0E4E84BD29125B920051F6EB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0E4E84C029125C390051F6EB /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		0E4E84C929125F6C0051F6EB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0E4E84CC291261F60051F6EB /* Transition+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+Extension.swift"; sourceTree = "<group>"; };
+		0E4E84CF29126B530051F6EB /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		0E4E84D12912A0850051F6EB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0E4E84D32912A0B80051F6EB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4E84C429125C560051F6EB /* Alamofire in Frameworks */,
+				0E4E84C729125DF50051F6EB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +62,7 @@
 		0E4E8495291255F80051F6EB = {
 			isa = PBXGroup;
 			children = (
+				0E4E84BD29125B920051F6EB /* .gitignore */,
 				0E4E84A0291255F80051F6EB /* SignupLoginProfile */,
 				0E4E849F291255F80051F6EB /* Products */,
 			);
@@ -58,13 +81,93 @@
 			children = (
 				0E4E84A1291255F80051F6EB /* AppDelegate.swift */,
 				0E4E84A3291255F80051F6EB /* SceneDelegate.swift */,
-				0E4E84A5291255F80051F6EB /* ViewController.swift */,
 				0E4E84A7291255F80051F6EB /* Main.storyboard */,
-				0E4E84AA291255FA0051F6EB /* Assets.xcassets */,
 				0E4E84AC291255FA0051F6EB /* LaunchScreen.storyboard */,
+				0E4E84AA291255FA0051F6EB /* Assets.xcassets */,
 				0E4E84AF291255FA0051F6EB /* Info.plist */,
+				0E4E84BF29125BB50051F6EB /* Key */,
+				0E4E84CB291261E30051F6EB /* Extensions */,
+				0E4E84BB29125B400051F6EB /* Network */,
+				0E4E84CE291263B10051F6EB /* Data */,
+				0E4E84BC29125B500051F6EB /* Utility */,
+				0E4E84C829125F190051F6EB /* Scene */,
 			);
 			path = SignupLoginProfile;
+			sourceTree = "<group>";
+		};
+		0E4E84BB29125B400051F6EB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E84C029125C390051F6EB /* NetworkResult.swift */,
+				0E4E84CF29126B530051F6EB /* APIRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0E4E84BC29125B500051F6EB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E84C929125F6C0051F6EB /* BaseViewController.swift */,
+				0E4E84D12912A0850051F6EB /* BaseView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0E4E84BF29125BB50051F6EB /* Key */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		0E4E84C829125F190051F6EB /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E84D52912A0BC0051F6EB /* SignUp */,
+				0E4E84D62912A0C70051F6EB /* Login */,
+				0E4E84D72912A0CF0051F6EB /* Profile */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		0E4E84CB291261E30051F6EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E84CC291261F60051F6EB /* Transition+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0E4E84CE291263B10051F6EB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0E4E84D52912A0BC0051F6EB /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E84B5291257CD0051F6EB /* SignUpViewController.swift */,
+				0E4E84D32912A0B80051F6EB /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		0E4E84D62912A0C70051F6EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E84B72912580F0051F6EB /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0E4E84D72912A0CF0051F6EB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E84B9291258630051F6EB /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +186,10 @@
 			dependencies = (
 			);
 			name = SignupLoginProfile;
+			packageProductDependencies = (
+				0E4E84C329125C560051F6EB /* Alamofire */,
+				0E4E84C629125DF50051F6EB /* SnapKit */,
+			);
 			productName = SignupLoginProfile;
 			productReference = 0E4E849E291255F80051F6EB /* SignupLoginProfile.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +218,10 @@
 				Base,
 			);
 			mainGroup = 0E4E8495291255F80051F6EB;
+			packageReferences = (
+				0E4E84C229125C560051F6EB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0E4E84C529125DF50051F6EB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 0E4E849F291255F80051F6EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4E84BE29125B920051F6EB /* .gitignore in Resources */,
 				0E4E84AE291255FA0051F6EB /* LaunchScreen.storyboard in Resources */,
 				0E4E84AB291255FA0051F6EB /* Assets.xcassets in Resources */,
 				0E4E84A9291255F80051F6EB /* Main.storyboard in Resources */,
@@ -138,8 +250,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E4E84A6291255F80051F6EB /* ViewController.swift in Sources */,
+				0E4E84CD291261F60051F6EB /* Transition+Extension.swift in Sources */,
+				0E4E84D029126B530051F6EB /* APIRouter.swift in Sources */,
+				0E4E84BA291258630051F6EB /* ProfileViewController.swift in Sources */,
 				0E4E84A2291255F80051F6EB /* AppDelegate.swift in Sources */,
+				0E4E84B6291257CD0051F6EB /* SignUpViewController.swift in Sources */,
+				0E4E84D42912A0B80051F6EB /* SignUpView.swift in Sources */,
+				0E4E84C129125C390051F6EB /* NetworkResult.swift in Sources */,
+				0E4E84B82912580F0051F6EB /* LoginViewController.swift in Sources */,
+				0E4E84D22912A0850051F6EB /* BaseView.swift in Sources */,
+				0E4E84CA29125F6C0051F6EB /* BaseViewController.swift in Sources */,
 				0E4E84A4291255F80051F6EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +415,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +425,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,6 +444,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +454,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +480,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E4E84C229125C560051F6EB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		0E4E84C529125DF50051F6EB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E4E84C329125C560051F6EB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E4E84C229125C560051F6EB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0E4E84C629125DF50051F6EB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E4E84C529125DF50051F6EB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E4E8496291255F80051F6EB /* Project object */;
 }
