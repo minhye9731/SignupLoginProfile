@@ -12,6 +12,7 @@ extension UIViewController {
     enum TransitionStyle {
         case present
         case presentNavigation
+        case presentFullNavigation
         case push
     }
     
@@ -22,6 +23,10 @@ extension UIViewController {
             self.present(vc, animated: true)
         case .presentNavigation:
             let navi = UINavigationController(rootViewController: vc)
+            self.present(navi, animated: true)
+        case .presentFullNavigation:
+            let navi = UINavigationController(rootViewController: vc)
+            navi.modalPresentationStyle = .fullScreen
             self.present(navi, animated: true)
         case .push:
             self.navigationController?.pushViewController(vc, animated: true)

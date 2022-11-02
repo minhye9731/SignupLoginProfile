@@ -9,9 +9,11 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    var window: UIWindow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
         configure()
         setConstraints()
     }
