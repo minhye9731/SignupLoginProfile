@@ -10,75 +10,46 @@ import Alamofire
 import RxSwift
 import RxCocoa
 
-struct Profile: Codable {
-    let user: User
-}
-
-struct User: Codable {
-    let photo: String
-    let email: String
-    let username: String
-}
-
-class ProfileViewController: BaseViewController {
+final class ProfileViewController: BaseViewController {
     
+    // MARK: - property
     let mainView = ProfileView()
     let viewModel = ProfileViewModel()
     let disposeBag = DisposeBag()
     
+    // MARK: - lifecycle
     override func loadView() {
         self.view = mainView
     }
     
+    // MARK: - functions
     override func configure() {
+        viewModel.getProfile()
         showProfile()
         bind()
     }
     
     func bind() {
-        
         let input = ProfileViewModel.Input(tap: mainView.logoutButton.rx.tap)
         let output = viewModel.transform(input: input)
         
         output.tap
             .bind { () in
-                // 로그인 데이터 삭제
-                print("로그아웃!!")
                 UserDefaults.standard.removeObject(forKey: "token")
-                
-                print(UserDefaults.standard.string(forKey: "token"))
-                 // 회원가입 화면으로 전환
                 let vc = SignUpViewController()
                 self.transition(vc, transitionStyle: .presentFullNavigation)
-                
             }
-        
+            .disposed(by: disposeBag)
     }
     
     func showProfile() {
-        let router = APIRouter.profile
-        
-        // 예외처리 추가 필요
-        AF.request(router).validate().responseDecodable(of: Profile.self) { response in
-            
-            let code = response.response?.statusCode
-            
-            switch response.result {
-            case .success(let data):
-                print(data)
-                print("통신은 성공 : \(code)")
-                
-                self.mainView.setProfileData(data: data)
-                
-                
-            case.failure(_):
-                print("실패다...")
-                print(response.response?.statusCode)
+        viewModel.profile
+            .withUnretained(self)
+            .subscribe { (vc, value) in
+                self.mainView.setProfileData(data: value)
+            } onError: { error in // Object, Error
+                self.showAlertMessageDetail(title: "<알림>", message: "123") // 미완성
             }
-        }
-        
+            .disposed(by: disposeBag)
     }
-    
-    
-
 }

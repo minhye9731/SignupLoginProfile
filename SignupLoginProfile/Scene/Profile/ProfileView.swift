@@ -7,8 +7,9 @@
 
 import UIKit
 
-class ProfileView: BaseView {
+final class ProfileView: BaseView {
     
+    // MARK: - property
     let titleLabel: UILabel = {
        let label = UILabel()
         label.textColor = .black
@@ -52,6 +53,7 @@ class ProfileView: BaseView {
         return button
     }()
     
+    // MARK: - functions
     override func configureUI() {
         [titleLabel, profileImageView, emailLabel, nameLabel, logoutButton].forEach {
             self.addSubview($0)
@@ -92,21 +94,22 @@ class ProfileView: BaseView {
             make.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(spacing)
             make.height.equalTo(70)
         }
-        
-        
     }
     
     func setProfileData(data: Profile) {
-        // 인디케이터 추가하자
-        
-        let url = URL(string: data.user.photo)!
-        let imageData = try? Data(contentsOf: url)
-        
-        profileImageView.image = UIImage(data: imageData!)
-            
         titleLabel.text = "\(data.user.username)님, 환영합니다! :)"
         emailLabel.text = "* E-mail : \(data.user.email)"
         nameLabel.text = "* 이름 : \(data.user.username)"
+        
+        DispatchQueue.global().async {
+            let url = URL(string: data.user.photo)!
+            let imageData = try? Data(contentsOf: url)
+            
+            DispatchQueue.main.async {
+                // 인디케이터 추가하자
+                self.profileImageView.image = UIImage(data: imageData!)
+            }
+        }
     }
     
 }
