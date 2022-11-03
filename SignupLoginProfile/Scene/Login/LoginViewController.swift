@@ -9,34 +9,31 @@ import UIKit
 import Alamofire
 import RxSwift
 import RxCocoa
+import Toast
 
-struct Login: Codable {
-    let token: String
-}
-
-class LoginViewController: BaseViewController {
+final class LoginViewController: BaseViewController {
     
+    // MARK: - property
     let mainView = LoginView()
     let viewModel = LoginViewModel()
     let disposeBag = DisposeBag()
     
+    // MARK: - lifecycle
     override func loadView() {
         self.view = mainView
     }
 
+    // MARK: - functions
     override func configure() {
         bind()
     }
     
     func bind () {
-        
-        let input = LoginViewModel.Input(pwText: mainView.pwTextField.rx.text, tap: mainView.loginButton.rx.tap)
+        let input = LoginViewModel.Input(
+            emailText: mainView.emailTextField.rx.text,
+            pwText: mainView.pwTextField.rx.text,
+            tap: mainView.loginButton.rx.tap)
         let output = viewModel.transform(input: input)
-        
-        output.validStatus
-            .bind(to: mainView.loginButton.rx.isEnabled,
-                  mainView.validationLabel.rx.isHidden)
-            .disposed(by: disposeBag)
         
         output.validText
             .drive(mainView.validationLabel.rx.text)
@@ -47,57 +44,49 @@ class LoginViewController: BaseViewController {
             .bind { (vc, value) in
                 let color: UIColor = value ? .systemGreen : .darkGray
                 vc.mainView.loginButton.backgroundColor = color
+                vc.mainView.loginButton.isEnabled = value
+                vc.mainView.validationLabel.isHidden = value
             }
             .disposed(by: disposeBag)
         
         output.tap
-            .bind { () in
+            .withUnretained(self)
+            .bind { _ in
                 guard let email = self.mainView.emailTextField.text,
                       let pw = self.mainView.pwTextField.text else { return }
                 print("\(email) / \(pw)")
                 
-                self.login(email: email, pw: pw)
+                self.viewModel.getLogin(email: email, pw: pw)
             }
+            .disposed(by: disposeBag)
         
-    }
-    
-    func login(email: String, pw: String) {
-        let router = APIRouter.login(email: email, password: pw)
-        
-        // 예외처리 추가 필요
-        AF.request(router).responseDecodable(of: Login.self) { response in
-            
-            switch response.result {
-            case .success(let data):
-                print(data.token)
-                
-                UserDefaults.standard.set(data.token, forKey : "token")
-                
-                // 프로필 화면으로 전환
-                let vc = ProfileViewController()
-                self.transition(vc, transitionStyle: .presentFullNavigation)
-                
-            case.failure(_):
-                print(response.response?.statusCode)
+        viewModel.login
+            .withUnretained(self)
+            .subscribe { (vc, value) in
+                print("로그인에 대한 서버 응답을 확인하자! : \(value)")
+                if value.token != nil {
+                    UserDefaults.standard.set(value.token, forKey : "token")
+                    let vc = ProfileViewController()
+                    self.transition(vc, transitionStyle: .presentFullNavigation)
+                } else {
+                    self.showAlertMessageDetail(title: "<알림>", message: "123")  // 미완성
+                }
+            } onError: { error in
+                print(error.localizedDescription)
+                self.mainView.makeToast(error.localizedDescription)
             }
-            
-        }
-        
+            .disposed(by: disposeBag)
     }
-    
 
 }
 
 extension LoginViewController {
     
-    // 첫실행 여부 확인함수
     func checkLogin() {
         if UserDefaults.standard.object(forKey: "token") == nil {
-            // 로그인이 안된 상태
             let vc = SignUpViewController()
             self.transition(vc, transitionStyle: .presentFullNavigation)
         } else {
-            // 로그인 된 상태
             let vc = ProfileViewController()
             self.transition(vc, transitionStyle: .presentFullNavigation)
         }
