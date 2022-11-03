@@ -8,8 +8,9 @@
 import UIKit
 import TextFieldEffects
 
-class SignUpView: BaseView {
+final class SignUpView: BaseView {
     
+    // MARK: - property
     let titleLabel: UILabel = {
        let label = UILabel()
         label.text = "회원가입하기"

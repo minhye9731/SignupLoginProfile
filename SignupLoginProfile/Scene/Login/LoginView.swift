@@ -8,8 +8,9 @@
 import UIKit
 import TextFieldEffects
 
-class LoginView: BaseView {
+final class LoginView: BaseView {
     
+    // MARK: - property
     let titleLabel: UILabel = {
        let label = UILabel()
         label.text = "로그인 해주세요! :)"
@@ -62,6 +63,7 @@ class LoginView: BaseView {
         return button
     }()
 
+    // MARK: - functions
     override func configureUI() {
         [titleLabel, emailTextField, pwTextField, validationLabel, loginButton].forEach {
             self.addSubview($0)
