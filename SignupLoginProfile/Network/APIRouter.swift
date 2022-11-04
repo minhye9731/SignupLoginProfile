@@ -44,7 +44,7 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .signup, .login: return ["Content-Type": "application/x-www-form-urlencoded"]
             //form-urlencoded 이걸 보고 아래에서 encoder를 선택함
-        case .profile: return [ "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "token")!)",
+        case .profile: return [ "Authorization": "Bearer \(UserDefaults.token)",
                                 "Content-Type": "application/x-www-form-urlencoded" ]
         }
     }
