@@ -38,6 +38,7 @@
 		0E4E84E82912EE190051F6EB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84E72912EE190051F6EB /* ProfileView.swift */; };
 		0E4E84EA2912F4BB0051F6EB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4E84E92912F4BB0051F6EB /* ProfileViewModel.swift */; };
 		0E4E84ED291307550051F6EB /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 0E4E84EC291307550051F6EB /* TextFieldEffects */; };
+		0E5EB29A2914F1EF0006B3C9 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5EB2992914F1EF0006B3C9 /* UserDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		0E4E84E52912E8FE0051F6EB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0E4E84E72912EE190051F6EB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0E4E84E92912F4BB0051F6EB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		0E5EB2992914F1EF0006B3C9 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				0E0500012913D7EC00D8255E /* Profile.swift */,
 				0E0500052913D92000D8255E /* Login.swift */,
+				0E5EB2992914F1EF0006B3C9 /* UserDefault.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				0E4E84D42912A0B80051F6EB /* SignUpView.swift in Sources */,
 				0E4E84E22912D5D30051F6EB /* CommonViewModel.swift in Sources */,
 				0E0500022913D7EC00D8255E /* Profile.swift in Sources */,
+				0E5EB29A2914F1EF0006B3C9 /* UserDefault.swift in Sources */,
 				0E0500042913D82B00D8255E /* SeSACError.swift in Sources */,
 				0E4E84E82912EE190051F6EB /* ProfileView.swift in Sources */,
 				0E0500082913DBF600D8255E /* Network.swift in Sources */,
