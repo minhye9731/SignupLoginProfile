@@ -24,8 +24,8 @@ final class ProfileViewController: BaseViewController {
     
     // MARK: - functions
     override func configure() {
-        viewModel.getProfile()
         showProfile()
+        viewModel.getProfile()
         bind()
     }
     
@@ -35,7 +35,9 @@ final class ProfileViewController: BaseViewController {
         
         output.tap
             .bind { () in
-                UserDefaults.standard.removeObject(forKey: "token")
+                UserDefaults.token = ""
+                
+                // 화면전환 방법 수정 필요 (지금 로직대로면 계속 로그인/로그아웃을 반복할때마다 화면이 쌓임)
                 let vc = SignUpViewController()
                 self.transition(vc, transitionStyle: .presentFullNavigation)
             }
