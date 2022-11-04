@@ -65,7 +65,7 @@ final class LoginViewController: BaseViewController {
             .subscribe { (vc, value) in
                 print("로그인에 대한 서버 응답을 확인하자! : \(value)")
                 if value.token != nil {
-                    UserDefaults.standard.set(value.token, forKey : "token")
+                    UserDefaults.token = value.token
                     let vc = ProfileViewController()
                     self.transition(vc, transitionStyle: .presentFullNavigation)
                 } else {
